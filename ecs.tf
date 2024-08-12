@@ -72,7 +72,7 @@ resource "aws_ecs_service" "main" {
   load_balancer {
     target_group_arn = aws_lb_target_group.main.arn
     container_name   = "web"
-    container_port   = 8000
+    container_port   = 5000
   }
 
   depends_on = [aws_lb_listener.http]
